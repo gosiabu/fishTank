@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All Fish</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>English Name</th>
+        <th>Latin Name</th>
+        <th>Minimum size</th>
+        <th>Maximum size</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="fish : ${fish}">
+        <td th:text="${fish.id}"></td>
+        <td th:text="${fish.englishName}"></td>
+        <td th:text="${fish.minSizeCm}"></td>
+        <td th:text="${fish.maxSizeCm}"></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
