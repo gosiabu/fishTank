@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All Fish</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Volume</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="fish : ${fish}">
+        <td th:text="${tank.id}"></td>
+        <td th:text="${tank.volume}"></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>

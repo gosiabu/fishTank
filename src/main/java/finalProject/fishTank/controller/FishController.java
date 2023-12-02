@@ -3,6 +3,7 @@ package finalProject.fishTank.controller;
 import finalProject.fishTank.model.Fish;
 import finalProject.fishTank.repository.FishRepository;
 import finalProject.fishTank.repository.TankRepository;
+import finalProject.fishTank.service.FishService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,12 +27,12 @@ public class FishController {
     }
 
 
-    @GetMapping("/allFish")
+    @GetMapping
     public String showAllFish(Model model) {
         // Get all fish and show'em
         List<Fish> allFish = fishRepository.findAll();
-        model.addAttribute("allFish", allFish);
+        model.addAttribute("fish", allFish);
 
-        return "redirect:allFish";
+        return "fish";
     }
 }
